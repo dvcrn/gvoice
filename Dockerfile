@@ -4,7 +4,8 @@ RUN apk add --no-cache git ca-certificates build-base su-exec olm-dev
 
 COPY . /build
 WORKDIR /build
-RUN go build -o /usr/bin/mautrix-gvoice
+
+RUN ./build.sh
 
 FROM alpine:3.20
 
